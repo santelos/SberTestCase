@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>phonebook</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/simplePagination.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/mainPageStyles.css}">
+    <script type="text/javascript" th:src="@{/js/lib/jquery-3.3.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/lib/simplePagination.js}"></script>
+    <script type="text/javascript" th:src="@{/js/src/mainPageJS.js}"></script>
+</head>
+<body>
+<div>
+    <div class="main-content-container">
+        <div class="search-form-container">
+            <form id="search-form">
+                <table>
+                    <tr>
+                        <td>№</td>
+                        <td>Имя</td>
+                        <td>Телефон</td>
+                        <td>Адрес</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                <input type="text" name="id" value="" placeholder="Id">
+                            </label>
+                        </td>
+                        <td>
+                            <label>
+                                <input type="text" name="name" value="" placeholder="Имя">
+                            </label>
+                        </td>
+                        <td>
+                            <label>
+                                <input type="tel" name="phone" value="" placeholder="Телефон">
+                            </label>
+                        </td>
+                        <td>
+                            <label>
+                                <input type="text" name="address" value="" placeholder="Адресс">
+                            </label>
+                        </td>
+                        <td>
+                            <label>
+                                <input type="submit" name="search" value="Найти">
+                            </label>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="content-table-container">
+            <table border="1px solid black" class="content-table"></table>
+        </div>
+        <div id="pagination-container"></div>
+    </div>
+    <div class="add-new-record-container">
+        <form action="" id="add-new-record-form" class="add-new-record-form">
+            <table class="add-new-record-table">
+                <tr>
+                    <td id="add-new-record-header">Добавить новую запись</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            <input type="text" name="name" placeholder="Имя">
+                        </label>
+                    </td>
+                    <td>Имя человека</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            <input type="tel" name="phone" placeholder="Телефон">
+                        </label>
+                    </td>
+                    <td>Телефон</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            <input type="text" name="address" placeholder="Адрес">
+                        </label>
+                    </td>
+                    <td>Адрес</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>
+                            <input type="submit" value="Добавить">
+                        </label>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>
